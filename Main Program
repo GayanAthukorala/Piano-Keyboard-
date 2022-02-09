@@ -1,0 +1,102 @@
+int T_C =262;
+int T_D =294;
+int T_E =330;
+int T_F =349;
+int T_G =392;
+int T_A =440;
+int T_B =493;
+
+ int C = 9;
+ int D = 1;
+ int E = 2;
+ int F = 3;
+ int G = 4;
+ int A = 10;
+ int B = 11;
+
+ int Buzz = 7;
+ int Buzz2 = 8;
+
+
+void setup()
+{
+  pinMode(C, INPUT);
+  digitalWrite(C,HIGH);
+
+  pinMode(D, INPUT);
+  digitalWrite(D,HIGH);
+
+  pinMode(E, INPUT);
+  digitalWrite(E,HIGH);
+
+  pinMode(F, INPUT);
+  digitalWrite(F,HIGH);
+
+  pinMode(G, INPUT);
+  digitalWrite(G,HIGH);
+
+  pinMode(A, INPUT);
+  digitalWrite(A,HIGH);
+
+  pinMode(B, INPUT);
+  digitalWrite(B,HIGH);
+
+  pinMode(Buzz,OUTPUT);
+  pinMode(Buzz2,OUTPUT);
+noTone(Buzz);
+
+}
+
+void loop()
+{
+
+ if(digitalRead(C)==HIGH){
+
+   tone(Buzz,T_C);
+   tone(Buzz2, T_C);
+ }
+
+
+
+ else if(digitalRead(D)==HIGH){
+
+   tone(Buzz,T_D);
+   tone(Buzz2, T_D);
+ }
+
+
+ else if(digitalRead(E)==HIGH){
+
+   tone(Buzz,T_E);
+   tone(Buzz2, T_E);
+ }
+ else if(digitalRead(F)==HIGH){
+
+   tone(Buzz,T_F);
+   tone(Buzz2, T_F);
+ }
+  else if(digitalRead(G)==HIGH){
+
+   tone(Buzz,T_G);
+   tone(Buzz2, T_G);
+ }
+
+ else if(digitalRead(A)==HIGH){
+
+   tone(Buzz,T_A);
+   tone(Buzz2, T_A);
+ }
+
+ else if(digitalRead(B)==HIGH){
+
+   tone(Buzz,T_B);
+   tone(Buzz2, T_B);
+ }
+
+
+ else{
+  noTone(Buzz);
+  noTone(Buzz2);
+ }
+}
+
